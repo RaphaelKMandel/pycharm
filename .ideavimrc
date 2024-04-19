@@ -1,0 +1,63 @@
+set scrolloff=10
+set incsearch
+set number norelativenumber
+"set number relativenumber
+set ruler
+set ignorecase
+"set showmode
+set clipboard=unnamed
+set clipboard+=ideaput
+
+" Don't use Ex mode, use Q for formatting.
+map Q gq
+
+" --- Enable IdeaVim plugins https://jb.gg/ideavim-plugins
+
+" Highlight copied text
+Plug 'machakann/vim-highlightedyank'
+" Commentary plugin
+Plug 'tpope/vim-commentary'
+
+let mapleader = " "
+
+"" -- Map IDE actions to IdeaVim -- https://jb.gg/abva4t
+"" Map \r to the Reformat Code action
+"map \r <Action>(ReformatCode)
+
+nmap <leader><Enter> gd
+
+imap <Up> <Esc><Up>
+imap <Down> <Esc><Down>
+imap <Left> <Esc><Left>
+imap <Right> <Esc><Right>
+
+map <leader>r <Action>(Run)
+map <leader>d <Action>(Debug)
+map <leader>b <Action>(ToggleLineBreakpoint)
+"map <leader>1 <Action>(PreviousTab)
+"map <leader>2 <Action>(NextTab)
+
+nmap <S-tab> <Action>(NextTab)
+nmap <C-tab> <Action>(PreviousTab)
+
+nmap <Enter> O<Esc><Down>
+
+
+
+
+
+
+
+
+
+
+
+
+
+"nmap <Up> <NOP>
+"nmap <Down> <NOP>
+"nmap <Left> <NOP>
+"nmap <Right> <NOP>
+
+vmap <S-Enter> <Esc>
+"imap <leader><space> <Esc>
