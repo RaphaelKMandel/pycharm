@@ -1,7 +1,8 @@
-<scheme name="Monokai" version="142" parent_scheme="Darcula">
+<scheme name="Monokai copy" version="142" parent_scheme="Darcula">
   <metaInfo>
     <property name="ide">PyCharmCore</property>
     <property name="ideVersion">2024.1.0.0</property>
+    <property name="originalScheme">Monokai copy</property>
   </metaInfo>
   <colors>
     <option name="CARET_COLOR" value="f8f8f0" />
@@ -1120,13 +1121,14 @@
     </option>
     <option name="PY.BUILTIN_NAME">
       <value>
-        <option name="FOREGROUND" value="66d9ef" />
+        <option name="FOREGROUND" value="a6e22e" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="PY.CLASS_DEFINITION">
       <value>
-        <option name="FOREGROUND" value="ffff00" />
+        <option name="FOREGROUND" value="a6e22e" />
+        <option name="FONT_TYPE" value="1" />
         <option name="EFFECT_TYPE" value="1" />
       </value>
     </option>
@@ -1142,12 +1144,12 @@
     </option>
     <option name="PY.DOC_COMMENT">
       <value>
-        <option name="FOREGROUND" value="66d9ef" />
+        <option name="FOREGROUND" value="ffff00" />
       </value>
     </option>
     <option name="PY.DOC_COMMENT_TAG">
       <value>
-        <option name="FOREGROUND" value="a6e22e" />
+        <option name="FOREGROUND" value="66d9ef" />
       </value>
     </option>
     <option name="PY.DOT">
@@ -1167,17 +1169,17 @@
     </option>
     <option name="PY.FSTRING_FRAGMENT_TYPE_CONVERSION">
       <value>
-        <option name="FOREGROUND" value="66d9ef" />
+        <option name="FOREGROUND" value="a6e22e" />
       </value>
     </option>
     <option name="PY.FUNCTION_CALL">
       <value>
-        <option name="FOREGROUND" value="ffff00" />
+        <option name="FOREGROUND" value="a6e22e" />
       </value>
     </option>
     <option name="PY.FUNC_DEFINITION">
       <value>
-        <option name="FOREGROUND" value="ffff00" />
+        <option name="FOREGROUND" value="a6e22e" />
         <option name="FONT_TYPE" value="1" />
       </value>
     </option>
@@ -1195,7 +1197,7 @@
     </option>
     <option name="PY.KEYWORD_ARGUMENT">
       <value>
-        <option name="FOREGROUND" value="a6e22e" />
+        <option name="FOREGROUND" value="ffff00" />
       </value>
     </option>
     <option name="PY.LINE_COMMENT">
@@ -1215,8 +1217,8 @@
     </option>
     <option name="PY.PARAMETER">
       <value>
-        <option name="FOREGROUND" value="a6e22e" />
-        <option name="FONT_TYPE" value="2" />
+        <option name="FOREGROUND" value="ea680c" />
+        <option name="FONT_TYPE" value="1" />
       </value>
     </option>
     <option name="PY.PARENTHS">
@@ -1238,7 +1240,7 @@
     </option>
     <option name="PY.SELF_PARAMETER">
       <value>
-        <option name="FOREGROUND" value="a6e22e" />
+        <option name="FOREGROUND" value="ea680c" />
         <option name="FONT_TYPE" value="3" />
       </value>
     </option>
