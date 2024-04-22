@@ -61,3 +61,8 @@ nmap <Enter> O<Esc><Down>
 
 vmap <S-Enter> <Esc>
 "imap <leader><space> <Esc>
+
+nmap zz yy<Action>(CommentByLineComment)P
+
+nmap <C-z> yyI#<Esc>p
+nmap <C-S-G> ggVG
