@@ -29,9 +29,6 @@ map <leader>2 <action>(NextTab)
 "nmap <s-tab> <action>(NextTab)
 "nmap <c-tab> <action>(PreviousTab)
 
-" don't use ex mode, use q for formatting.
-map q gq
-
 imap <s-enter> <esc>
 imap <up> <esc><up>
 imap <down> <esc><down>
