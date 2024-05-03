@@ -47,14 +47,14 @@ nmap gcc <action>(CommentByLineComment)
 nmap gcd  yy P gcc I<Esc>l
 
 "Navigation
+nmap ge :NERDTree<CR>
+nmap gq <action>(CloseEditor)
 nmap gt <action>(NextTab)
 nmap gr <action>(PreviousTab)
 nmap gw <C-w>w
 nmap gv <C-w>v
 nmap gh <C-w>s
-nmap gq <action>(CloseEditor)
-
-nmap ge :NERDTree<CR>
 
 "Remapping Control-R to capital U
 nmap U <C-r>
+
