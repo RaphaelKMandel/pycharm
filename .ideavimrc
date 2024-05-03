@@ -1,3 +1,9 @@
+"IDEAVIM PLUGINS
+plug 'machakann/vim-highlightedyank'
+plug 'tpope/vim-commentary'
+plug 'preservim/nerdtree'
+plug 'terryma/vim-multiple-cursors'
+
 "SETTINGS
 set scrolloff=10
 set incsearch
@@ -9,32 +15,34 @@ set showmode
 set paste
 set clipboard=unnamed
 set clipboard+=ideaput
+set NERDTree
 
-"IDEAVIM PLUGINS
-plug 'machakann/vim-highlightedyank'
-plug 'tpope/vim-commentary'
-plug 'preservim/nerdtree'
-plug 'terryma/vim-multiple-cursors'
-
-
-"LEADER
-let mapleader = " "
-
-"ALL MODES
-map <leader>r <action>(Run)
-map <leader>d <action>(Debug)
-map <leader>b <action>(ToggleLineBreakpoint)
 
 "INSERT MODE
+"Easy exiting of insert mode
+imap jj <Esc>
 
-" Bind arrow keys to esc insert mode
-imap <up> <esc><up>
-imap <down> <esc><down>
-imap <left> <esc><left>
-imap <right> <esc><right>
+"Remove arrow keys
+imap <up>
+imap <down>
+imap <left>
+imap <right>
 
 
 "NORMAL MODE
+"Remove arrow keys
+nmap <up>
+nmap <down>
+nmap <left>
+nmap <right>
+
+"Remapping Control-R to capital U
+nmap U <C-r>
+
+"Search results in center of screen"
+nmap n nzz
+nmap N Nzz
+
 " Inserting blank lines with enter
 nmap <enter> o<esc>
 nmap <S-enter> O<esc>
@@ -43,18 +51,41 @@ nmap <S-enter> O<esc>
 nmap ga ggVG
 
 "Comments
-nmap gcc <action>(CommentByLineComment)
-nmap gcd  yy P gcc I<Esc>l
 
-"Navigation
-nmap ge :NERDTree<CR>
-nmap gq <action>(CloseEditor)
-nmap gt <action>(NextTab)
-nmap gr <action>(PreviousTab)
-nmap gw <C-w>w
-nmap gv <C-w>v
-nmap gh <C-w>s
+"LEADER"
+let mapleader = " "
 
-"Remapping Control-R to capital U
-nmap U <C-r>
+"INSERT MODE"
+imap <leader><leader> <esc>
 
+"NORMAL MODE"
+"Actions"
+nmap <leader>~ <AcTion>(Run)
+nmap <leader>` <action>(RunClass)
+nmap <leader>d <action>(Debug)
+nmap <leader>b <action>(ToggleLineBreakpoint)
+
+"Navigation"
+nmap <leader>e :NERDTree<CR>
+nmap <leader>q <action>(CloseEditor)
+nmap <leader>t <action>(NextTab)
+nmap <leader>r <action>(PreviousTab)
+nmap <leader>w <C-w>w
+nmap <leader>v <C-w>v
+nmap <leader>h <C-w>s
+
+"Appends"
+nmap <leader>, A,<Esc>j
+nmap <leader>; A;<Esc>j
+nmap <leader>' I'<Esc>A'<Esc>j
+nmap <leader>" I"<Esc>A"<Esc>j
+nmap <leader>( I(<Esc>A)<Esc>j
+nmap <leader>) <leader>(
+nmap <leader>[ I[<Esc>A]<Esc>j
+nmap <leader>] <leader>[
+nmap <leader>{ I{<Esc>A}<Esc>j
+nmap <leader>} <leader>{
+
+"Comments"
+nmap <leader>/ <action>(CommentByLineComment)
+nmap <leader>? yy P <leader>/ I<Esc>l
