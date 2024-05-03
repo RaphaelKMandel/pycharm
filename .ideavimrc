@@ -1,4 +1,4 @@
-" settings
+"SETTINGS
 set scrolloff=10
 set incsearch
 "set number norelativenumber
@@ -10,38 +10,51 @@ set paste
 set clipboard=unnamed
 set clipboard+=ideaput
 
-" --- enable ideavim plugins https://jb.gg/ideavim-plugins
+"IDEAVIM PLUGINS
 plug 'machakann/vim-highlightedyank'
 plug 'tpope/vim-commentary'
 plug 'preservim/nerdtree'
 plug 'terryma/vim-multiple-cursors'
 
 
-" highlight  text
-"" -- map ide actions to ideavim -- https://jb.gg/abva4t
+"LEADER
 let mapleader = " "
 
+"ALL MODES
 map <leader>r <action>(Run)
 map <leader>d <action>(Debug)
 map <leader>b <action>(ToggleLineBreakpoint)
-map <leader>1 <action>(PreviousTab)
-map <leader>2 <action>(NextTab)
-"nmap <s-tab> <action>(NextTab)
-"nmap <c-tab> <action>(PreviousTab)
 
-imap <s-enter> <esc>
+"INSERT MODE
+
+" Bind arrow keys to esc insert mode
 imap <up> <esc><up>
 imap <down> <esc><down>
 imap <left> <esc><left>
 imap <right> <esc><right>
 
+
+"NORMAL MODE
+" Inserting blank lines with enter
 nmap <enter> o<esc>
 nmap <S-enter> O<esc>
 
+"Highlight all
 nmap ga ggVG
+
+"Comments
 nmap gcc <action>(CommentByLineComment)
-nmap gyc  yy P gccI<Esc>l
+nmap gcd  yy P gcc I<Esc>l
 
+"Navigation
+nmap gt <action>(NextTab)
+nmap gr <action>(PreviousTab)
+nmap gw <C-w>w
+nmap gv <C-w>v
+nmap gh <C-w>s
+nmap gq <action>(CloseEditor)
 
-"" map \r to the reformat code action
+nmap ge :NERDTree<CR>
 
+"Remapping Control-R to capital U
+nmap U <C-r>
