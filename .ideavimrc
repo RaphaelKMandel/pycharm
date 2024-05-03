@@ -1,10 +1,10 @@
-"IDEAVIM PLUGINS
+"IDEAVIM PLUGINS"
 plug 'machakann/vim-highlightedyank'
 plug 'tpope/vim-commentary'
 plug 'preservim/nerdtree'
 plug 'terryma/vim-multiple-cursors'
 
-"SETTINGS
+"SETTINGS"
 set scrolloff=10
 set incsearch
 "set number norelativenumber
@@ -18,39 +18,38 @@ set clipboard+=ideaput
 set NERDTree
 
 
-"INSERT MODE
-"Easy exiting of insert mode
+"INSERT MODE"
+"Easy exiting of insert mode"
 imap jj <Esc>
 
-"Remove arrow keys
+"Remove arrow keys"
 imap <up>
 imap <down>
 imap <left>
 imap <right>
 
 
-"NORMAL MODE
-"Remove arrow keys
+"NORMAL MODE"
+"Remove arrow keys"
 nmap <up>
 nmap <down>
 nmap <left>
 nmap <right>
 
-"Remapping Control-R to capital U
+"Remapping Control-R to capital U"
 nmap U <C-r>
 
 "Search results in center of screen"
 nmap n nzz
 nmap N Nzz
 
-" Inserting blank lines with enter
+"Inserting blank lines with enter"
 nmap <enter> o<esc>
 nmap <S-enter> O<esc>
 
-"Highlight all
+"Highlight all"
 nmap ga ggVG
 
-"Comments
 
 "LEADER"
 let mapleader = " "
