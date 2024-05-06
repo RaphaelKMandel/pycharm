@@ -31,10 +31,10 @@ imap <right>
 
 "NORMAL MODE"
 "Remove arrow keys"
-nmap <up>
-nmap <down>
-nmap <left>
-nmap <right>
+nmap <up> <C-w><up>
+nmap <down> <C-W><down>
+nmap <left> <C-w><left>
+nmap <right> <C-w><right
 
 "Remapping Control-R to capital U"
 nmap U <C-r>
@@ -49,6 +49,8 @@ nmap <S-enter> O<esc>
 
 "Highlight all"
 nmap ga ggVG
+
+
 
 
 "LEADER"
@@ -88,3 +90,6 @@ nmap <leader>} <leader>{
 "Comments"
 nmap <leader>/ <action>(CommentByLineComment)
 nmap <leader>? yy P <leader>/ I<Esc>l
+
+"Special Paste"
+nmap <leader>p "0p
