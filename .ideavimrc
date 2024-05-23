@@ -15,12 +15,13 @@ set showmode
 set paste
 set clipboard=unnamed
 set clipboard+=ideaput
-set NERDTree
 
+set highlightedyank
+set commentary
+set NERDTree
+set multiplecursors
 
 "INSERT MODE"
-"Easy exiting of insert mode"
-imap jj <Esc>
 
 "Remove arrow keys"
 imap <up>
@@ -28,20 +29,20 @@ imap <down>
 imap <left>
 imap <right>
 
-
 "NORMAL MODE"
+
 "Remove arrow keys"
-nmap <up> <C-w><up>
-nmap <down> <C-W><down>
-nmap <left> <C-w><left>
-nmap <right> <C-w><right
+nmap <up>
+nmap <down>
+nmap <left>
+nmap <right>
 
 "Remapping Control-R to capital U"
-nmap U <C-r>
+nnoremap U <C-r>
 
 "Search results in center of screen"
-nmap n nzz
-nmap N Nzz
+nnoremap n nzz
+nnoremap N Nzz
 
 "Inserting blank lines with enter"
 nmap <enter> o<esc>
@@ -50,21 +51,18 @@ nmap <S-enter> O<esc>
 "Highlight all"
 nmap ga ggVG
 
-
-
-
 "LEADER"
 let mapleader = " "
 
-"INSERT MODE"
-imap <leader><leader> <esc>
-
 "NORMAL MODE"
+
 "Actions"
 nmap <leader>~ <AcTion>(Run)
 nmap <leader>` <action>(RunClass)
 nmap <leader>d <action>(Debug)
 nmap <leader>b <action>(ToggleLineBreakpoint)
+
+ 
 
 "Navigation"
 nmap <leader>e :NERDTree<CR>
@@ -87,9 +85,7 @@ nmap <leader>] <leader>[
 nmap <leader>{ I{<Esc>A}<Esc>j
 nmap <leader>} <leader>{
 
-"Comments"
-nmap <leader>/ <action>(CommentByLineComment)
-nmap <leader>? yy P <leader>/ I<Esc>l
+ 
 
-"Special Paste"
-nmap <leader>p "0p
+"Comments"
+nmap <leader>/ yy P <action>(CommentByLineComment) I<Esc>l
