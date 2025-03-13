@@ -1,91 +1,136 @@
-"IDEAVIM PLUGINS"
-plug 'machakann/vim-highlightedyank'
-plug 'tpope/vim-commentary'
-plug 'preservim/nerdtree'
-plug 'terryma/vim-multiple-cursors'
-
 "SETTINGS"
-set scrolloff=10
-set incsearch
-"set number norelativenumber
-set number relativenumber
-set ruler
-set ignorecase
-set showmode
-set paste
-set clipboard=unnamed
-set clipboard+=ideaput
+    set scrolloff=10
+    set incsearch
+    set number norelativenumber
+    set numberwidth=10
+    set ruler
+    set ignorecase
+    set showmode
+    set paste
+    set clipboard=unnamed
+    set clipboard+=ideaput
 
-set highlightedyank
-set commentary
-set NERDTree
-set multiplecursors
+
+"IDEAVIM PLUGINS"
+    plug 'machakann/vim-highlightedyank'
+    plug 'tpope/vim-commentary'
+    plug 'preservim/nerdtree'
+    plug 'terryma/vim-multiple-cursors'
+    plug 'vim-surround'
+    plug 'vim-scripts/argtextobj.vim'
+
+    set highlightedyank
+    set commentary
+    set nerdtree
+    set multiplecursors
+    set surround
+    set argtextobj
+    set which-key
+ 
+    "WhichKey Config"
+    set notimeout
+    "set timeoutlen = 50000"
+    let g:WhichKey_DefaultDelay = 1000
+    let g:WhichKey_ShowVimActions = "true"
+    let g:WhichKey_ShowTypedSequence = "false"
+    let g:WhichKey_SortOrder = "by_key_prefix_first"
+    let g:WhichKey_CommandColor = "green"
+    let g:WhichKey_FontSize = 16
+ 
 
 "INSERT MODE"
+    "Remove arrow keys"
+    imap <up> <Nop>
+    imap <down> <Nop>
+    imap <left> <Nop>
+    imap <right> <Nop>
 
-"Remove arrow keys"
-imap <up>
-imap <down>
-imap <left>
-imap <right>
 
 "NORMAL MODE"
-
-"Remove arrow keys"
-nmap <up>
-nmap <down>
-nmap <left>
-nmap <right>
-
-"Remapping Control-R to capital U"
-nnoremap U <C-r>
-
-"Search results in center of screen"
-nnoremap n nzz
-nnoremap N Nzz
-
-"Inserting blank lines with enter"
-nmap <enter> o<esc>
-nmap <S-enter> O<esc>
-
-"Highlight all"
-nmap ga ggVG
-
+    "Remove arrow keys"
+    nmap <up> <Nop>
+    nmap <down> <Nop>
+    nmap <left> <Nop>
+    nmap <right> <Nop>
+ 
+    "Capital Y is y$"
+    nnoremap Y y$
+ 
+    "Remapping Control-R to capital U"
+    nnoremap U <C-r>
+ 
+    "Hold cursor location when joining
+    nnoremap J mzJ`z
+ 
+    "Search results in center of screen"
+    nnoremap n nzz
+    nnoremap N Nzz
+ 
+    "scrolling in center of screen"
+    nnoremap <C-d> <C-d>zz
+    nnoremap <C-u> <C-u>zz
+ 
+    "Inserting blank lines with enter"
+    nmap <C-o> o<esc>
+    nmap <A-o> O<esc>
+ 
+    "Macro shortcut
+    nmap Q @q
+ 
+    "Highlight all"
+    nmap <C-a> ggVG
+ 
+ 
+"VISUAL MODE"
+    "Up/Down"
+    vmap K :m-2<CR>gv=gv
+    vmap J :m'>+1<CR>gv=gv
+ 
+    "Left Right"
+    vmap < <gv
+    vmap > >gv
+ 
+ 
+ 
 "LEADER"
-let mapleader = " "
-
-"NORMAL MODE"
-
-"Actions"
-nmap <leader>~ <AcTion>(Run)
-nmap <leader>` <action>(RunClass)
-nmap <leader>d <action>(Debug)
-nmap <leader>b <action>(ToggleLineBreakpoint)
-
+    let mapleader = " "
  
-
-"Navigation"
-nmap <leader>e :NERDTree<CR>
-nmap <leader>q <action>(CloseEditor)
-nmap <leader>t <action>(NextTab)
-nmap <leader>r <action>(PreviousTab)
-nmap <leader>w <C-w>w
-nmap <leader>v <C-w>v
-nmap <leader>h <C-w>s
-
-"Appends"
-nmap <leader>, A,<Esc>j
-nmap <leader>; A;<Esc>j
-nmap <leader>' I'<Esc>A'<Esc>j
-nmap <leader>" I"<Esc>A"<Esc>j
-nmap <leader>( I(<Esc>A)<Esc>j
-nmap <leader>) <leader>(
-nmap <leader>[ I[<Esc>A]<Esc>j
-nmap <leader>] <leader>[
-nmap <leader>{ I{<Esc>A}<Esc>j
-nmap <leader>} <leader>{
-
+    "NORMAL MODE"
+    nmap <leader>ua :set norelativenumber<CR>
+    nmap <leader>un :set relativenumber<CR>
  
-
-"Comments"
-nmap <leader>/ yy P <action>(CommentByLineComment) I<Esc>l
+    nnoremap <leader>= <C-a>
+    nnoremap <leader>- <C-x>
+ 
+    vnoremap <leader>= g<C-a>
+    vnoremap <leader>- g<C-x>
+ 
+    "Actions"
+    nnoremap <leader>~ :action Run<CR>
+    nnoremap <leader>` :action RunClass<CR>
+    nnoremap <leader>d :action Debug<CR>
+    nnoremap <F2> :action ToggleLineBreakpoint<CR>
+    nnoremap [b :action PreviousTab<CR>
+    nnoremap ]b :action NextTab<CR>
+    nnoremap [[ :action MethodUp<CR>
+    nnoremap ]] :action MethodDown<CR>
+ 
+    nnoremap <leader>= :action ReformatCode<CR>
+ 
+    nnoremap <C-l> <C-w>l
+    nnoremap <C-h> <C-w>h
+    nnoremap <C-j> <C-w>j
+    nnoremap <C-k> <C-w>k
+    nnoremap \\ :action SplitHorizontally<CR>
+    nnoremap <leader>\\ :action SplitVertically<CR>
+ 
+    nnoremap gd :action GotoDeclaration<CR>
+    nnoremap gp :action GotoSuperMethod<CR>
+ 
+ 
+    nnoremap <leader>e :NERDTreeToggle<CR>
+    nnoremap <F12> :action HideSideWindows<CR>
+ 
+ 
+    "Comments"
+    nmap <leader>/ yy P :action CommentByLineComment<CR> I<Esc>l
