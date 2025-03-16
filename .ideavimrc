@@ -53,6 +53,10 @@
     nmap <left> <Nop>
     nmap <right> <Nop>
 
+    "Highlight search and auto disable"
+    nnoremap / :set hls<CR>/
+    nnoremap <esc> <esc>:set nohls<CR>
+
     "Window Movement"
     nnoremap \\ <C-w>s
     nnoremap \| <C-w>v
